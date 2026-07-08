@@ -273,3 +273,12 @@ footer{
         height:300px;
     }
 }
+   .business-video{
+    width:100%;
+    max-width:600px;
+    border-radius:25px;
+    display:block;
+    margin:20px auto;
+    border:5px solid #0057B8;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+} 
