@@ -282,3 +282,31 @@ footer{
     border:5px solid #0057B8;
     box-shadow:0 8px 20px rgba(0,0,0,0.3);
 } 
+    .audio-section{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    padding:25px;
+    background:#ffffff;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.audio-section h2{
+    color:#0057B8;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.audio-section p{
+    color:#555;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.audio-section audio{
+    width:100%;
+    border-radius:30px;
+}
