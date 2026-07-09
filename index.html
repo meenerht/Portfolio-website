@@ -50,11 +50,55 @@
     <p>
         Click the play button below to listen to a brief introduction about me, my skills, and my professional journey.
     </p>
+audio<section class="audio-section hero">
+    <h2 class="section-title">🎙 My Brief Introduction</h2>
 
-    <audio controls preload="metadata">
+    <p>
+        Click the play button below to listen to a brief introduction about me, my skills, and my professional journey.
+    </p>
+
+    <audio id="myAudio">
         <source src="my introduction.mp3" type="audio/mpeg">
     </audio>
-        </section>
+
+    <div class="audio-player">
+        <button id="playBtn">▶ Play</button>
+        <input type="range" id="progressBar" value="0">
+        <span id="currentTime">0:00</span>
+    </div>
+</section>
+
+<script>
+const audio = document.getElementById("myAudio");
+const playBtn = document.getElementById("playBtn");
+const progressBar = document.getElementById("progressBar");
+const currentTime = document.getElementById("currentTime");
+
+playBtn.onclick = function () {
+    if (audio.paused) {
+        audio.play();
+        playBtn.innerHTML = "⏸ Pause";
+    } else {
+        audio.pause();
+        playBtn.innerHTML = "▶ Play";
+    }
+};
+
+audio.ontimeupdate = function () {
+    progressBar.max = audio.duration;
+    progressBar.value = audio.currentTime;
+
+    let min = Math.floor(audio.currentTime / 60);
+    let sec = Math.floor(audio.currentTime % 60);
+    if (sec < 10) sec = "0" + sec;
+
+    currentTime.innerHTML = min + ":" + sec;
+};
+
+progressBar.oninput = function () {
+    audio.currentTime = progressBar.value;
+};
+            </script>
 
 
 <footer>
