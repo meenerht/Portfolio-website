@@ -311,3 +311,42 @@ footer{
     width:100%;
     border-radius:30px;
 }
+.audio-player{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+    padding:25px;
+    background:#0057B8;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.audio-player button{
+    background:#fff;
+    color:#0057B8;
+    border:none;
+    padding:12px 25px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.audio-player button:hover{
+    background:#f0f0f0;
+}
+
+.audio-player input[type=range]{
+    flex:1;
+    height:8px;
+    cursor:pointer;
+}
+
+.audio-player span{
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+        }
